@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    let frutas = [ "maca" , "banana","pera","ameixa"]
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        
+        List(frutas , id: \.self){fruta in
+                Text(fruta)
         }
-        .padding()
     }
 }
 
